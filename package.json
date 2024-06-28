@@ -1,0 +1,27 @@
+{
+  "name": "event-driven-architecture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "set NODE_ENV=development&& ts-node-dev --respawn --exit-child --transpile-only -r tsconfig-paths/register --ignore-watch node_modules src/server.ts",
+    "start": "node dist/infra/http/server.js",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "nodeenv": "^3.0.75",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.5"
+  }
+}
